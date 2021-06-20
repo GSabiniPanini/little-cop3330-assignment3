@@ -1,11 +1,31 @@
 @startuml
-'https://plantuml.com/sequence-diagram
+'https://plantuml.com/class-diagram
 
-autonumber
+class Solution41 {
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
+}
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+class StringParser {
+    + static sortStringArray(stringArray : ArrayList<String>, count : int) : void
+    + static countStringArray(stringArray : ArrayList<String>) : int
+
+}
+
+
+
+class FileHandler {
+    + arr[] : ArrayList<String>
+    + stringCount : int
+
+    + readFile() : void
+    + readFileLine() : String
+    + printToFile() : void
+    + getFileLine(index : int) : String
+
+}
+
+Solution41 o--> StringParser
+Solution41 o--> FileHandler
+
+
 @enduml
