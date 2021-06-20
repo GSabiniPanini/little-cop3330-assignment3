@@ -10,10 +10,10 @@ import java.util.Formatter;
 import java.util.FormatterClosedException;
 
 public class FileOutput {
+    String path;
     String name;
     String[] array;
     int length;
-    String path;
 
     public FileOutput(String path, String name, String[] array, int length) {
         this.name = name;
