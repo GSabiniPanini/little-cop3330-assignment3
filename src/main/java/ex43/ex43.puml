@@ -1,0 +1,36 @@
+@startuml
+'https://plantuml.com/class-diagram
+Solution42 o--> WebsiteHandler
+Solution42 o--> Input
+
+class Solution42 {
+
+}
+
+class Input {
+    + storeValues() ; void
+    + getSiteName() : String
+    + getAuthor() : String
+    + getInput1() : String
+    + getInput2() : String
+    + isJavaScript() : boolean
+    + isCSS() : boolean
+}
+
+class WebsiteHandler {
+    + title : String
+    + author : String
+    + jsFlag : boolean
+    + cssFlag : boolean
+    + path : String
+
+    <<constructor>> Website(title : String, author : String, flag1 : boolean, flag2 : boolean)
+
+    + createStructure() : void
+    + createWebsiteDir() : void
+    + createTitleDir() : void
+    + createJSDir() : boolean
+    + createCSSDir() : boolean
+    + createIndexHTML() : void
+}
+@enduml
