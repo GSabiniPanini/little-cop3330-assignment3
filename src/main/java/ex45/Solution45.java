@@ -24,9 +24,7 @@ public class Solution45 {
         String name = in.nextLine();
 
         //Create FileOutput object while processing original string with parser.processArray() in the parameters
+        //automatically prints output to file
         FileOutput fileOut = new FileOutput(path , name, parser.processArray(fileIn.array), fileIn.length);
-
-        //get outputString and output to file
-        fileOut.printOutput();
     }
 }

@@ -20,7 +20,7 @@ public class FileHandler {
     public void readFile() {
 
         try {
-            Path path = Paths.get("exercise41_input.txt");
+            Path path = Paths.get("src/main/java/ex41/exercise41_input.txt");
 
             Scanner in = new Scanner(path);
 

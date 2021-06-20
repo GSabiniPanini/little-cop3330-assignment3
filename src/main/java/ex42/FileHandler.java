@@ -22,7 +22,7 @@ public class FileHandler {
     public void readFile() {
 
         try {
-            Path dir = Paths.get("exercise42_input.txt");
+            Path dir = Paths.get("src/main/java/ex42/exercise42_input.txt");
 
             Scanner in = new Scanner(dir);
 
