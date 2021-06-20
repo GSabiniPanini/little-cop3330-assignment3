@@ -5,7 +5,6 @@ class Solution45 {
 }
 
 class FileInput {
-    + path : String
     + length : int
     + array : ArrayList<String>
 
@@ -13,7 +12,7 @@ class FileInput {
 
     + readFile(path : String): void
     + getArrayLength(arr : ArrayList<String>) : int
-    ^^ delete getArrayLength later
+
 }
 
 class FileParser {
@@ -24,14 +23,15 @@ class FileParser {
 
 class FileOutput {
     path : String
+    name : String
     array : String[]
     length : int
-    output : String
 
-    <<constructor> FileOutput(name : String, array : String[], length : int)
+    <<constructor> FileOutput(path : String, name : String, array : String[], length : int)
 
-    + buildOutput() : String
-    + getLineString(path : String, array : String[], length : int) : String
+    + printOutput() : void
+    + getLineString(array : String[], index : int) : String
+    + createFile(name : String) : void
 }
 
 Solution45 o--> FileOutput
