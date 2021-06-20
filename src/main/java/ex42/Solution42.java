@@ -5,32 +5,24 @@
 
 package ex42;
 
-import java.io.File;
-import java.io.IOException;
-
 public class Solution42 {
 
     public static void main(String[] args) {
-        try {
-            final String directory = new File("src/main/exercise41_input.txt").getCanonicalPath();
+        //initialize FileHandler
+        FileHandler myHandler = new FileHandler();
 
-            System.out.println(directory);
-        }
-        catch(IOException e)
+        //reads file and fills array
+        myHandler.readFile();
+
+        //split input at "," and sort into different variables
+        StringProcessor.processInput(myHandler.input, myHandler.fName, myHandler.lName, myHandler.salary);
+
+        //print back table
+        System.out.printf("%-10s%-10s%-10s%n%s%n", "Last", "First", "Salary", "--------------------------");
+        for(int i=0; i<7; i++)
         {
-            e.printStackTrace();
+            System.out.print(StringProcessor.getLineString(myHandler.fName, myHandler.lName, myHandler.salary, i));
         }
     }
-    //open file
 
-    //read lines in file and store in String/Char array
-
-    //close file
-
-    //split into tokens
-
-    //make Worker class for each token
-    //class has this.lastName this.firstName and this.salary
-
-    //print table with printf without commas
 }
