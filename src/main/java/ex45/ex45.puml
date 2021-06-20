@@ -1,27 +1,41 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
-
-List <|-- AbstractList
-Collection <|-- AbstractCollection
-
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
+class Solution45 {
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+class FileInput {
+    + path : String
+    + length : int
+    + array : ArrayList<String>
+
+    <<constructor> FileInput(path : String)
+
+    + readFile(path : String): void
+    + getArrayLength(arr : ArrayList<String>) : int
+    ^^ delete getArrayLength later
 }
+
+class FileParser {
+    + processArray(a1 : ArrayList<String>) : String[]
+    + replace(temp : String[], a2 : String[], size : int, s1 : String, s2 : String) : void
+    + convertArrayList(a1 : ArrayList<String>, index : int) : String
+}
+
+class FileOutput {
+    path : String
+    array : String[]
+    length : int
+    output : String
+
+    <<constructor> FileOutput(name : String, array : String[], length : int)
+
+    + buildOutput() : String
+    + getLineString(path : String, array : String[], length : int) : String
+}
+
+Solution45 o--> FileOutput
+Solution45 o--> FileParser
+Solution45 o--> FileInput
 
 @enduml

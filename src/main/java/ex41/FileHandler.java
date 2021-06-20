@@ -20,9 +20,9 @@ public class FileHandler {
     public void readFile() {
 
         try {
-            Path dir = Paths.get("exercise41_input.txt");
+            Path path = Paths.get("exercise41_input.txt");
 
-            Scanner in = new Scanner(dir);
+            Scanner in = new Scanner(path);
 
             //loops readFileLine() to fill out array
             while(in.hasNext()) {
@@ -47,7 +47,7 @@ public class FileHandler {
     public void printToFile() {
 
         //open or create output file
-        try(Formatter output = new Formatter("exercise41_output.txt")) {
+        try(Formatter output = new Formatter("src/main/java/ex41/exercise41_output.txt")) {
             output.format("%s%d%s%n%s%n", "Total of ", this.stringCount, " names", "-----------------");
 
             //loop getFileLine() to print array as a list
