@@ -5,6 +5,20 @@
 
 package ex44;
 
+import java.io.IOException;
+
 public class Solution44 {
+    public static void main(String[] args) throws IOException {
+        //manually input path
+        String path = "src/main/java/ex44/exercise44_input.json";
+
+        //initialize JsonInput with path to read file
+        JsonInput myInput = new JsonInput(path);
+
+        //call readFile method to use Gson/Json to parse file and create objects
+        myInput.readFile(path);
+
+        //
+    }
 
 }

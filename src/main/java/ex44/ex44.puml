@@ -5,6 +5,14 @@ class Solution44 {
 }
 
 class JsonInput {
+    + path : String
+
+    <<constructor>> JsonInput(path : String)
+
+    + readFile() : void
+    + readJsonStream(in : InputStream) : List<Object>
+    + readProductArray(reader : JsonReader) : List<Object>
+    + readObject(reader : JsonReader) : Object
 
 }
 
@@ -12,6 +20,8 @@ class Object {
     + name : String
     + price : double
     + quantity : int
+
+    <<constructor>> Object (name : String, price : double, quantity : int)
 }
 
 Solution44 o--> JsonInput

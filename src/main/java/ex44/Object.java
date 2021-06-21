@@ -11,4 +11,11 @@ public class Object {
     public String name;
     public double price;
     public int quantity;
+
+    //constructor for Object
+    public Object(String name, double price, int quantity) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
 }
