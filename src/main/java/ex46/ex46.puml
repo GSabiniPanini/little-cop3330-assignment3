@@ -1,27 +1,33 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
-
-List <|-- AbstractList
-Collection <|-- AbstractCollection
-
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
+class Solution46 {
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+class StringParser {
+    + oldArray : String[]
+
+    + makeMap(array : String[], size : int) : HashMap<String, Integer>
+    + orderByFreq(tempMap : HashMap<String, Integer>) : ArrayList<Entry<String, Integer>>
 }
 
+class FileReader {
+    + array : String[]
+    + path : String
+    + size : int
+
+    <<constructor> FileReader(path : String)
+
+    + readFile(path : String): void
+}
+
+class Grapher {
+    + graphHistogram(freqlist : ArrayList<Entry<String, Integer>>) : void
+    + getAsterisks(n : int) : String
+
+}
+
+Solution46 o--> FileReader
+Solution46 o--> StringParser
+Solution46 o--> Grapher
 @enduml
