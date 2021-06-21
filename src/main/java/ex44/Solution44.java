@@ -18,7 +18,12 @@ public class Solution44 {
         //call readFile method to use Gson/Json to parse file and create objects
         myInput.readFile(path);
 
-        //
+        //prompt for input
+
+        //loop for input
+            //retrieve object that matches input if found
+
+            //if not found start over
     }
 
 }
